@@ -295,32 +295,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                            @foreach ($pengaduan as $pengaduan)
-                                {{-- {{dd($pengaduan)}} --}}
-                                    <tr>
-                                        <td>{{ $k += 1 }}</td>
-                                        <td>{{ $pengaduan->tgl_pengaduan }}</td>
-                                        <td>{{ $pengaduan->nama }}</td>
-                                        <td>{{ $pengaduan->isi_laporan }}</td>
-                                        <td> @if ($v->foto != null)
-                                            <img src="{{ Storage::url($v->foto) }}" alt="{{ 'Gambar '.$v->judul_laporan }}" class="gambar-lampiran">
-                                            @endif
-                                        </td>
-                                        <td>{{ $pengaduan->tanggapan }}</td>
-                                        <td>{{ $pengaduan->nama_petugas }}</td>
-                                        <td>
-                                            @if ($v->status == '0')
-                                                <a href="" class="badge badge-danger">Pending</a>
-                                            @elseif($v->status == 'proses')
-                                                <a href="" class="badge badge-warning text-white">Proses</a>
-                                            @else
-                                                <a href="" class="badge badge-success ">Selesai</a>
-                                            @endif
-                                        </td>
-                                        
-                                    </tr>
-                                @endforeach
-                            </tbody>          
+                                 
                         </table>
                     </div>
             

@@ -21,6 +21,8 @@ class CreateMasyarakatsTable extends Migration
             $table->string('username', 25)->unique();
             $table->string('password')->nullable();
             $table->string('telp', 13)->nullable();
+            $table->enum('jenis_kelamin', ['lelaki', 'wanita']);
+            $table->text('alamat');
 
             $table->string('provider_id')->nullable();
             $table->string('provider')->nullable();

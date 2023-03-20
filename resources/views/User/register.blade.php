@@ -62,6 +62,24 @@
                                 </div>
                             @enderror
                         </div>
+                        <div class="form-group">
+                            <label for="level">Jenis Kelamin</label>
+                            <div class="input-group mb-3">
+                                <select name="level" id="level" class="custom-select">
+                                    <option value="petugas" selected>Pilih Jenis kelamin (Default Jenis Kelamin)</option>
+                                    <option value="admin">Lelaki</option>
+                                    <option value="petugas">Wanita</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" value="{{ old('alamat') }}" name="Alamat" placeholder="alamat" class="form-control @error('alamat') is-invalid @enderror">
+                            @error('telp')
+                                <div class="invalid-feedback">
+                                    {{ $message }}
+                                </div>
+                            @enderror
+                        </div>
                         <button type="submit" class="btn btn-danger w-100">DAFTAR</button>
                     </form>
 

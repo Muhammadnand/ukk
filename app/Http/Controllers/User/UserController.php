@@ -209,7 +209,7 @@ class UserController extends Controller
         } else {
             // Jika $siapa kosong
             $pengaduan = Pengaduan::where([['nik', '!=', Auth::guard('masyarakat')->user()->nik], ['status', '!=', '0']])->orderBy('tgl_pengaduan', 'desc')->get();
-
+            // dd($pengaduan);
             // Arahkan ke file user/laporan.blade.php sebari kirim data pengaduan, hitung, siapa
             return view('user.laporan', ['pengaduan' => $pengaduan, 'hitung' => $hitung, 'siapa' => $siapa]);
         }
